@@ -1,0 +1,45 @@
+{{!< default}}
+{{> header}}
+
+<main class="container" role="main">
+    <div class="row">
+        {{#foreach posts}}
+
+            <div class="col-lg-4">
+                <div class="box-grid">
+                    <article role="article">
+                        <header>
+                            <h1> <a href="{{{url}}}">{{title}}</a> </h1>
+                            <p>by <a href="{{author.website}}" target="_blank">{{author}}</a> </p>
+                            <time datetime="{{date format="DD MMM YYYY"}}">
+                                <span>{{date format = 'DD MMM YYYY'}}</span>
+                            </time>
+                        </header>
+                        <hr>
+                        <p>{{excerpt words="30"}} &hellip;<br> <a class="btn btn-primary" href="{{{url}}}">Read More</a></p>
+                    </article>
+                    <footer>
+                        {{#if tags}}
+                            <div>
+                                <span></span> Tags: {{tags separator=" . "}}
+                            </div>
+                        {{/if}}
+                        <!--<div>
+                            <p>Share:</p>
+                            &lt;!&ndash;<a href="http://www.facebook.com/sharer.php?u={{url absolute="true"}}" target="_blank"><span></span></a>
+                            <a href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}" target="_blank"><span></span></a>
+                            <a href="https://plus.google.com/share?url={{url absolute="true"}}" target="_blank"><span></span></a>&ndash;&gt;
+                        </div>-->
+                    </footer>
+                </div>
+            </div>
+        {{/foreach}}
+    </div>
+    {{#if pagination}}
+        <div class="pagination">
+            {{{pagination}}}
+        </div>
+    {{/if}}
+</main>
+
+{{> footer}}

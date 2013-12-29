@@ -1,0 +1,54 @@
+{{!< default}}
+{{> header}}
+
+<main class="container" role="main">
+    {{#post}}
+        <a href="/">&larr; Go Back</a>
+        <article role="article" id="article-container">
+            <header>
+                <h1><a href="{{{url}}}">{{title}}</a></h1>
+                <p>by <a href="{{author.website}}" target="_blank">{{author}}</a></p>
+                <time datetime="{{date format="DD MMM YYYY"}}">
+                    <span></span>
+                    {{date format='DD MMM YYYY'}}
+                </time>
+            </header>
+            <div>
+                {{content}}
+            </div>
+            {{#if tags}}
+                <div>
+                    <span></span> Tags: {{tags separator=" . "}}
+                </div>
+            {{/if}}
+            <div>
+                <p>Share:
+                    <a href="http://www.facebook.com/sharer.php?u={{url absolute="true"}}" target="_blank"><span></span></a>
+                    <a href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}" target="_blank"><span></span></a>
+                    <a href="https://plus.google.com/share?url={{url absolute="true"}}" target="_blank"><span></span></a>
+                </p>
+            </div>
+        </article>
+        {{#if author}}
+            <footer class="row">
+                <h4>About the Author</h4>
+                <div class="col-lg-12">
+                    {{#if author.image}}
+                        <div class="col-lg-2"><img class="col-lg-12 img-circle" src="{{author.image}}" /></div>
+                    {{/if}}
+                    <div class="col-lg-5" style="margin-top:56px">
+                    <strong>{{author.name}}</strong>
+
+                    {{#if author.website}}
+                        <div><a href="{{author.website}}" target="_blank">{{author.website}}</a></div>
+                    {{/if}}
+
+                    <p>{{author.bio}}</p>
+
+                    </div>
+                </div>
+            </footer>
+        {{/if}}
+    {{/post}}
+</main>
+{{> footer}}

@@ -1,0 +1,41 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700);
+@import url(http://fonts.googleapis.com/css?family=Mr+Bedfort);
+@import url(http://fonts.googleapis.com/css?family=Marcellus);
+
+body {font-family: 'Marcellus', serif; background: snow}
+
+h1,h2,h3,h4,h5,h6 {font-family: 'Ubuntu', sans-serif;}
+
+.box-grid {
+    border: 1px solid;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    padding: 20px 20px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: 7px 5px 14px #000000;
+    -webkit-box-shadow: 7px 5px 14px #000000;
+    box-shadow: 7px 5px 14px #000000;
+}
+
+.footer{
+    background: rgba(0, 0, 0, 0.48);
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.footer a{
+    color: rgba(255, 24, 38, 0.68);
+    font-weight: bolder;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.header-blog {
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
