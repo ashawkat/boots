@@ -21,12 +21,11 @@
                     <span></span> Tags: {{tags separator=" . "}}
                 </div>
             {{/if}}
-            <div>
-                <p>Share:
-                    <a href="http://www.facebook.com/sharer.php?u={{url absolute="true"}}" target="_blank"><span></span></a>
-                    <a href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}" target="_blank"><span></span></a>
-                    <a href="https://plus.google.com/share?url={{url absolute="true"}}" target="_blank"><span></span></a>
-                </p>
+            <div class="sharepost_uber">
+                <h4 class="share_uber">Share this post: &nbsp;</h4>
+                <a class="share_uber icon-twitter" target="_blank" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"><span class="hidethis_uber">Twitter</span></a>
+                <a class="share_uber icon-facebook" target="_blank" href="http://www.facebook.com/sharer.php?u={{url absolute="true"}}"><span class="hidethis_uber">Facebook</span></a>
+                <a class="share_uber icon-gplus" target="_blank" href="https://plus.google.com/share?url={{url absolute="true"}}"><span class="hidethis_uber">Google+</span></a>
             </div>
         </article>
         {{#if author}}

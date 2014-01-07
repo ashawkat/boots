@@ -5,9 +5,38 @@
 body {font-family: 'Marcellus', serif; background: snow}
 
 h1,h2,h3,h4,h5,h6 {font-family: 'Ubuntu', sans-serif;}
-
+.scrolls {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 80px;
+    white-space:nowrap
+}
+.container-bg{
+    background:#EFEFEF; 
+    box-shadow: 1px 1px 10px #999; 
+    /*margin: auto; 
+    text-align: center;*/ 
+    /*position: relative;*/
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 20px !important;
+    /*width: 100%;
+    height: auto;*/
+    padding-top: 5px;
+}
+.scroll-div{
+     box-shadow: 1px 1px 10px #999;
+    margin: 2px;
+    max-height: 50px;
+    cursor: pointer;
+    display:inline-block;
+    *display:inline;/* For IE7*/
+    *zoom:1;/* For IE7*/
+    vertical-align:top;
+}
 .box-grid {
-    border: 1px solid;
+    /*border: 1px solid;*/
     margin-right: 10px;
     margin-bottom: 15px;
     padding: 20px 20px;
@@ -37,5 +66,84 @@ h1,h2,h3,h4,h5,h6 {font-family: 'Ubuntu', sans-serif;}
     height: 300px;
     text-align: center;
     margin-bottom: 15px;
+}
+
+.sharepost_uber {
+  background-color: #f2bf89;
+  border: 0.063em solid #ef9335;
+  color: white;
+  margin: 1.618em 0 3.236em 0;
+  padding: 1.618em;
+}
+.sharepost_uber a,
+.sharepost_uber a:link,
+.sharepost_uber a:visited {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+.sharepost_uber a:hover,
+.sharepost_uber a:focus {
+  color: #25748c;
+}
+h4.share_uber {
+  margin: 0 0.5em 0 0;
+}
+
+@font-face {
+  font-family: 'icons';
+  src: url('../fonts/icons.eot');
+  src: url('../fonts/icons.eot?#iefix') format('embedded-opentype'), url('../fonts/icons.woff') format('woff'), url('../fonts/icons.ttf') format('truetype'), url('../fonts/icons.svg#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.icon-ghost:before,
+.icon-rss:before,
+.icon-twitter:before,
+.icon-gplus:before,
+.icon-facebook:before {
+  font-family: 'icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+}
+.icon-twitter:before {
+  content: "\e002";
+  font-size: 1.1em;
+  margin-right: 1em;
+}
+.icon-gplus:before {
+  content: "\e003";
+  margin-right: 1em;
+}
+.icon-facebook:before {
+  content: "\e004";
+  margin-right: 1em;
+}
+.icon-rss:before {
+  content: "\e001";
+}
+.icon-ghost:before {
+  content: "\e000";
+  margin-right: 0.5em;
+}
+.hidethis_uber {
+  display: none;
+}
+img {
+  border: 0;
+  max-width: 100%;
+}
+
+.share_uber {
+  float: left;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
